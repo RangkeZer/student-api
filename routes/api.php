@@ -19,6 +19,8 @@ Route::get('student', [studentController::class, 'index']);
 Route::post('student/store', [studentController::class, 'store']);
 Route::get('student/show/{id}', [studentController::class, 'show']);
 Route::post('student/update/{id}', [studentController::class, 'update']);
+Route::get('student/delete/{id}', [studentController::class, 'destroy']);
+
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
